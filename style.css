@@ -4,14 +4,16 @@
 
 body {
     margin: 0;
+    background: #52504b;
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', sans-serif;
     text-shadow: 0px 0px 20px #242424;
+    background-blend-mode: hard-light;
 }
 
 main {
@@ -22,14 +24,18 @@ main {
     justify-content: space-between;
 }
 
+span{
+    font-weight: 700;
+}
+
 div.top {
     display: flex;
     justify-content: space-between;
 }
 
 h1.time {
-    text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
+    margin-top: 0;
 }
 
 div#crypto,
@@ -38,7 +44,26 @@ div#crypto-2,
 div#crypto-3 {
     font-size: 1.3rem;
     color:white;
-    background: transparent;
+    padding: 1rem;
+}
+
+div#crypto,
+div#crypto-1,
+div#crypto-2,
+div#crypto-3,
+.note {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.5;
+}
+
+div#crypto:hover,
+div#crypto-1:hover,
+div#crypto-2:hover,
+div#crypto-3:hover,
+.note:hover {
+    opacity: 0.9;
 }
 
 div#crypto > p,
@@ -102,4 +127,40 @@ p#author {
 
 p{
     padding: 5px;
+}
+
+.bitcoins-info {
+    display: block;
+}
+
+.note{
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.note h3{
+    text-align: center;
+}
+
+.note-info{
+    display: flex;
+    padding: 0 20px;
+}
+
+.note-info h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.note-info p{
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+@media (min-width: 600px) {
+    .bitcoins-info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }

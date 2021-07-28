@@ -1,12 +1,23 @@
+<!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="style.css">
         <title>Personal Dashboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>    
             <div class="top">
+                <h1 id="time" class="time"></h1>
+
+                <div id="weather"></div>
+            </div>
+            
+            <div class="bitcoins-info">
                 <div id="crypto" class="card">
                     <div id="crypto-top"></div>
                 </div>
@@ -19,11 +30,17 @@
                 <div id="crypto-3" class="card">
                     <div id="crypto-top-3"></div>
                 </div>
-
-                <div id="weather"></div>
             </div>
-            
-            <h1 id="time" class="time"></h1>
+
+            <div class="note">
+                <h3>Note:</h3>
+                <div class="note-info">
+                    <p>🎯: Current Price</p>
+                    <p>👆: Last 24 Hrs Highest Price</p>
+                    <p>👇: Last 24 Hrs Lowest Price</p>
+                </div>
+            </div>
+
             <p id="author"></p>
         </main>
         <script src="index.js"></script>
